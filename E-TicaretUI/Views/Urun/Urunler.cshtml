@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Urunler";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+@*@model IEnumerable<E_TicaretEntity.EntityFramework.Urun>*@
+@model IEnumerable<E_TicaretUI.Models.Classes.UrunKategoriMarkaViewModel>
+<section class="panel">
+    <header class="panel-heading">
+        Ürünler
+    </header>
+    <br />
+    <div class="panel-body">
+        <div class="adv-table editable-table ">
+            <div class="clearfix">
+                <div class="btn-group">
+                    <a href="/Urun/UrunEkle" class="btn btn-success">
+                        Add New <i class="icon-plus"></i>
+                    </a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a href="/Urun/UrunAktif"style="margin-left:20px" class="btn btn-danger">
+                        Pasif Urunler <i class="icon-plus"></i>
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="space15"></div>
+            <br />
+            <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                <thead>
+                    <tr>
+                        <th>Ürün Adi</th>
+                        <th>Açıklama</th>
+                        <th>Alış Fiyat</th>
+                        <th>Satış Fiyat</th>
+                        <th>Kategori Adı</th>
+                        <th>Eklenme Tarih</th>
+                        <th>Marka Adı</th>
+                        <th>Son Kullanma Tarih</th>
+                        <th>Resim Ekle</th>
+                        <th>Güncelle</th>
+                        <th>Sil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var urun in Model)
+                    {
+                        <tr class="">
+                            <td>@urun.Adi</td>
+                            <td>@urun.Aciklama</td>
+                            <td>@urun.AlisFiyat</td>
+                            <td class="center">@urun.SatisFiyat</td>
+                            <td class="center">@urun.KategoriAdi</td>
+                            <td class="center">@urun.EklenmeTarih</td>
+                            <td class="center">@urun.MarkaAdi</td>
+                             <td class="center">@urun.SonKullanmaTarih</td>
+                            <td><a class="delete" href="/Urun/UrunResimEkle/@urun.id"><i class="icon-plus"></i></a></td>
+                            <td><a class="edit" href="/Urun/UrunGuncelle/@urun.id"><i class="icon-pencil"></i></a></td>
+                            @*<td><a class="delete" href="/Urun/UrunSil/@urun.id"><i class="icon-trash"></i></a></td>*@
+                            <td>  @Html.ActionLink("Sil", "UrunSil", "Urun", new { ID = urun.id }, new { @class = "delete  icon-trash" })</td>
+
+</tr>
+                    }
+
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

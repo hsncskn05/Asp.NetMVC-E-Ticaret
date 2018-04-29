@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-TicaretUI", "E-TicaretUI\E-TicaretUI.csproj", "{1A4087F8-D3B3-4FA9-B68A-C75480DA4F07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-TicaretData", "E-TicaretData\E-TicaretData.csproj", "{07A75801-A8DD-4C99-AF8A-6E22E8B63206}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-TicaretCore", "E-TicaretCore\E-TicaretCore.csproj", "{8D96293E-1568-4906-9551-40545209A656}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-TicaretBusiness", "E-TicaretBusiness\E-TicaretBusiness.csproj", "{49F617E4-F3E4-46CB-B73D-D24629487AF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-TicaretEntity", "E-TicaretEntity\E-TicaretEntity.csproj", "{CB048987-80A7-48A2-8EA8-ABC0BEDC2378}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A4087F8-D3B3-4FA9-B68A-C75480DA4F07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A4087F8-D3B3-4FA9-B68A-C75480DA4F07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A4087F8-D3B3-4FA9-B68A-C75480DA4F07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A4087F8-D3B3-4FA9-B68A-C75480DA4F07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07A75801-A8DD-4C99-AF8A-6E22E8B63206}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07A75801-A8DD-4C99-AF8A-6E22E8B63206}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07A75801-A8DD-4C99-AF8A-6E22E8B63206}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07A75801-A8DD-4C99-AF8A-6E22E8B63206}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D96293E-1568-4906-9551-40545209A656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D96293E-1568-4906-9551-40545209A656}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D96293E-1568-4906-9551-40545209A656}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D96293E-1568-4906-9551-40545209A656}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49F617E4-F3E4-46CB-B73D-D24629487AF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F617E4-F3E4-46CB-B73D-D24629487AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F617E4-F3E4-46CB-B73D-D24629487AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F617E4-F3E4-46CB-B73D-D24629487AF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB048987-80A7-48A2-8EA8-ABC0BEDC2378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB048987-80A7-48A2-8EA8-ABC0BEDC2378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB048987-80A7-48A2-8EA8-ABC0BEDC2378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB048987-80A7-48A2-8EA8-ABC0BEDC2378}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

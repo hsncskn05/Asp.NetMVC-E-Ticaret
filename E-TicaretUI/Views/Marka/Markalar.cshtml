@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "Markalar";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+@model IEnumerable<E_TicaretEntity.EntityFramework.Marka>
+
+@section head{
+    <link href="/Content/Admin/assets/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
+}
+
+<section class="panel">
+    <header class="panel-heading">
+        Markalar
+    </header>
+    <br />
+    <div class="panel-body">
+        <div class="adv-table editable-table ">
+            <div class="clearfix">
+                <div class="btn-group">
+                    <a href="/Marka/MarkaEkle" class="btn btn-success">
+                        Add New <i class="icon-plus"></i>
+                    </a>
+                    <a href="/Marka/MarkaAktif" class="btn btn-danger">
+                        Pasif Markalar <i class="icon-plus"></i>
+                    </a>
+                </div>
+
+            </div>
+            <div class="space15"></div>
+            <br />
+            <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                <thead>
+                    <tr>
+                        <th>Marka Adi</th>
+                        <th>Açıklama</th>
+                        <th>Resmi Göster</th>
+                        <th>Güncelle</th>
+                        <th>Sil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var marka in Model)
+                    {
+                        <tr class="">
+                            <td>@marka.Adi</td>
+                            <td>@marka.Aciklama</td>
+                            <td><a class="fancybox" href="@marka.Resim.OrtaYol"><i class="icon-eye-open"></i></a></td>
+                            <td><a class="edit" href="/Marka/MarkaGuncelle/@marka.id"><i class="icon-pencil"></i></a></td>
+                            <td><a class="delete" href="/Marka/MarkaSil/@marka.id"><i class="icon-trash"></i></a></td>
+
+                        </tr>
+                    }
+
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<script src="/Content/Admin/assets/fancybox/source/jquery.fancybox.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        //    fancybox
+        jQuery(".fancybox").fancybox();
+    });
+
+</script>

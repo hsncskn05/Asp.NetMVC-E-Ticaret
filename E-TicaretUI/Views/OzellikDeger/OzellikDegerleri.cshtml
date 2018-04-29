@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "OzellikDegerleri";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+@model IEnumerable<E_TicaretEntity.EntityFramework.OzellikDeger>
+
+<section class="panel">
+    <header class="panel-heading">
+        Ozellik Değerleri
+    </header>
+    <br />
+    <div class="panel-body">
+        <div class="adv-table editable-table ">
+            <div class="clearfix">
+                <div class="btn-group">
+                    <a href="/OzellikDeger/OzellikDegerEkle" class="btn btn-success">
+                        Add New <i class="icon-plus"></i>
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="space15"></div>
+            <br />
+            <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                <thead>
+                    <tr>
+                        <th>Ozellik Deger Adi</th>
+                        <th>Açıklama</th>
+                        <th>Özellik Tipi</th>
+
+                        <th>Güncelle</th>
+                        <th>Sil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var deger in Model)
+                    {
+                        <tr class="">
+                            <td>@deger.Adi</td>
+                            <td>@deger.Aciklama</td>
+                            @if (deger.OzellikTip != null)
+                            {
+                                <td>@deger.OzellikTip.Adi</td>
+                            }
+
+
+                            <td><a class="edit" href="/OzellikDeger/OzellikDegerGuncelle/@deger.id"><i class="icon-pencil"></i></a></td>
+                            <td><a class="delete" href="/OzellikDeger/OzellikDegerSil/@deger.id"><i class="icon-trash"></i></a></td>
+
+                        </tr>
+                    }
+
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+

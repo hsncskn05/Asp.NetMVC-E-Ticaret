@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "UrunResimEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<form action="/Urun/UrunResimEkle" method="post" enctype="multipart/form-data">
+    <br /><br /><br /><br /><br />
+
+    <input type="hidden" name="uId" value="@Model" />
+    <div class="form-group">
+        <label class="control-label col-md-3">Ürün Resmi</label>
+        <div class="controls col-md-9">
+            <div class="fileupload fileupload-new" data-provides="fileupload">
+                <span class="btn btn-white btn-file">
+                    <span class="fileupload-new"><i class="icon-paper-clip"></i> Resim Seç</span>
+
+                    <input type="file" class="default" />
+                </span>
+                <span class="fileupload-preview" style="margin-left:5px;"></span>
+                <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none; margin-left:5px;"></a>
+            </div>
+        </div>
+    </div>
+
+    <input type="submit" value="Kaydet" class=" btn btn-primary" />
+
+
+</form>
+

@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "MarkaAktif";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+@model IEnumerable<E_TicaretEntity.EntityFramework.Marka>
+<br />
+<br /><br /><br />
+<section class="panel">
+    <header class="panel-heading">
+        Markalar
+    </header>
+    <br />
+    <div class="panel-body">
+        <div class="adv-table editable-table ">
+            <div class="clearfix">
+
+
+            </div>
+            <div class="space15"></div>
+            <br />
+            <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                <thead>
+                    <tr>
+                        <th>Marka Adi</th>
+                        <th>Açıklama</th>
+                        <th>Marka Durum</th>
+
+                        <th>Durum Güncelle</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var marka in Model)
+                    {
+                        <tr class="">
+                            <td>@marka.Adi</td>
+                            <td>@marka.Aciklama</td>
+                            <td>@marka.Sonlandi</td>
+
+                            <td><a class="edit" href="/Marka/MarkaAktifguncelle/@marka.id"><i class="icon-pencil"></i></a></td>
+
+
+
+                        </tr>
+                    }
+
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+

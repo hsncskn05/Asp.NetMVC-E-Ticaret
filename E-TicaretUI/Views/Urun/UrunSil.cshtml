@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "UrunSil";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+@model E_TicaretEntity.EntityFramework.Urun
+
+
+
+
+
+<section class="panel">
+    <header class="panel-heading">
+        Ürünler
+    </header>
+    <br />
+    <div class="panel-body">
+        
+                <div class="adv-table editable-table ">
+                    <div class="clearfix">
+                     
+
+                    </div>
+                    <div class="space15"></div>
+                    <br />
+                    
+                        <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                            <thead>
+                                <tr>
+                                    <th>Ürün Adi</th>
+                                    <th>Açıklama</th>
+
+                                    <th>Silinecek ID</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr class="">
+                                    <td>@Model.Adi</td>
+                                    <td>@Model.Aciklama</td>
+                                    <td>@Model.id</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                
+                    <div class="form-group">
+                        @*<div class="col-lg-offset-2 col-lg-10">
+                            <button class="btn btn-danger" type="submit">Sil</button>
+                        </div>*@
+                        @using (@Html.BeginForm())
+                        {
+                            <input type="submit" class="btn btn-danger btn-lg" value="Yes" />
+                        }
+                        @Html.ActionLink("No", "UrunSil", "Urun", null, new { @class = "btn btn-success btn-lg" })
+                    </div>
+                </div>
+              
+        </div>
+</section>
+

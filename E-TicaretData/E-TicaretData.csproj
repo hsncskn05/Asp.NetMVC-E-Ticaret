@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{07A75801-A8DD-4C99-AF8A-6E22E8B63206}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>E_TicaretData</RootNamespace>
+    <AssemblyName>E-TicaretData</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\IKargoData.cs" />
+    <Compile Include="Abstract\IKategoriData.cs" />
+    <Compile Include="Abstract\IMarkaData.cs" />
+    <Compile Include="Abstract\IMusteriAdresData.cs" />
+    <Compile Include="Abstract\IMusteriData.cs" />
+    <Compile Include="Abstract\IOzellikDegerData.cs" />
+    <Compile Include="Abstract\IOzellikTipData.cs" />
+    <Compile Include="Abstract\IResimData.cs" />
+    <Compile Include="Abstract\ISatisData.cs" />
+    <Compile Include="Abstract\ISatisDetayData.cs" />
+    <Compile Include="Abstract\ISiparisDurumData.cs" />
+    <Compile Include="Abstract\IUrunData.cs" />
+    <Compile Include="Abstract\IUrunOzellikData.cs" />
+    <Compile Include="Concrete\Entities\EFKargoData.cs" />
+    <Compile Include="Concrete\Entities\EFKategoriData.cs" />
+    <Compile Include="Concrete\Entities\EFMarkaData.cs" />
+    <Compile Include="Concrete\Entities\EFMusteriAdresData.cs" />
+    <Compile Include="Concrete\Entities\EFMusteriData.cs" />
+    <Compile Include="Concrete\Entities\EFOzellikDegerData.cs" />
+    <Compile Include="Concrete\Entities\EFOzellikTipData.cs" />
+    <Compile Include="Concrete\Entities\EFResimData.cs" />
+    <Compile Include="Concrete\Entities\EFSatisData.cs" />
+    <Compile Include="Concrete\Entities\EFSatisDetayData.cs" />
+    <Compile Include="Concrete\Entities\EFSiparisDurumData.cs" />
+    <Compile Include="Concrete\Entities\EFUrunData.cs" />
+    <Compile Include="Concrete\Entities\EFUrunOzellikData.cs" />
+    <Compile Include="Context\TicaretContext1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\E-TicaretCore\E-TicaretCore.csproj">
+      <Project>{8d96293e-1568-4906-9551-40545209a656}</Project>
+      <Name>E-TicaretCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\E-TicaretEntity\E-TicaretEntity.csproj">
+      <Project>{cb048987-80a7-48a2-8ea8-abc0bedc2378}</Project>
+      <Name>E-TicaretEntity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "OzellikTipEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+@model IEnumerable<E_TicaretEntity.EntityFramework.Kategori>
+<br /><br /><br /><br /><br />
+<div class="row">
+    <div class="col-lg-12">
+        <section class="panel">
+            <header class="panel-heading">
+                Ozellik Ekle
+            </header>
+            <div class="panel-body">
+                <form action="/OzellikTip/OzellikTipEkle" class="form-horizontal tasi-form" method="post">
+                    @*@using (Html.BeginForm("MarkaEkle", "Admin", FormMethod.Post,
+                               new { enctype = "multipart/form-data" }))
+                        {*@
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Ozellik Tip Adı</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="Adi">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Açıklama</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="Aciklama">
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Kategori Seç</label>
+                        <div class="col-sm-10">
+
+                            <select class="form-control m-bot15" name="KategoriID">
+                                @foreach (var ktg in Model)
+                                {
+                                    <option value="@ktg.id">@ktg.Adi</option>
+                                }
+                            </select>
+
+                        </div>
+                    </div>
+               
+                    <div class="form-group">
+                        <div class="col-lg-offset-2 col-lg-10">
+                            <button class="btn btn-danger" type="submit">Kaydet</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+
